@@ -1,18 +1,25 @@
+export interface IParams {
+  offset?: number;
+  limit?: number;
+}
+
 const productsService = {
-  getProducts: async () => {
+  getProducts: async (params?: IParams) => {
     try {
-      const response = await fetch(
-        `${process.env.API_URL}/products?offset=1&limit=4`,
-      );
-      if (!response.ok) {
-        throw new Error(`API Error: ${response.status}`);
+      const url = new URL(`${process.env.API_URL}/products`);
+
+      if (params) {
+        Object.entries(params).forEach(([key, value]) => {
+          if (value !== undefined && value !== null && value !== "") {
+            url.searchParams.append(key, value.toString());
+          }
+        });
       }
+      const response = await fetch(url.toString());
       const products = await response.json();
       return products;
-    } catch (error) {
-      console.error("Get Products Failed:", error);
-
-      throw new Error("Unable to load products. Please try again.");
+    } catch (error: any) {
+      return { data: null, message: error?.message };
     }
   },
   getSingleProduct: async (id: string) => {
@@ -23,10 +30,8 @@ const productsService = {
       }
       const product = await response.json();
       return product;
-    } catch (error) {
-      console.error("Get Single Product Failed:", error);
-
-      throw new Error("Unable to load product. Please try again.");
+    } catch (error: any) {
+      return { data: null, message: error?.message };
     }
   },
 };

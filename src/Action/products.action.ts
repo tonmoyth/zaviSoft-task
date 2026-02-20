@@ -1,7 +1,7 @@
-import productsService from "@/services/product.service";
+import productsService, { IParams } from "@/services/product.service";
 
-export const getProducts = async () => {
-  return await productsService.getProducts();
+export const getProducts = async (params?: IParams) => {
+  return await productsService.getProducts(params);
 };
 
 export const getSingleProduct = async (id: string) => {

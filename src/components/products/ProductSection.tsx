@@ -3,8 +3,10 @@ import ProductCard from "./ProductCard";
 import { getProducts } from "@/Action/products.action";
 
 const ProductSection = async () => {
-  const productData = await getProducts();
-  console.log(productData);
+  const productData = await getProducts({
+    offset: 1,
+    limit: 4,
+  });
 
   return (
     <section className="w-full lg:px-15 ">

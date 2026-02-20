@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar1 from "@/components/Layout/navbar1";
+import Footer from "@/components/Layout/Footer";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={`${rubik.className}  antialiased bg-[#E7E7E3]`}>
         <Navbar1></Navbar1>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );
