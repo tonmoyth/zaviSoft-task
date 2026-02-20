@@ -1,6 +1,7 @@
 import DoItRight from "@/components/bannar/DoItRight";
 import HeroImageSelector from "@/components/bannar/HeroImageSelector";
 import ProductSection from "@/components/products/ProductSection";
+import Reviews from "@/components/review/Review";
 
 const images = [
   {
@@ -23,6 +24,7 @@ export default function Home() {
       <DoItRight></DoItRight>
       <HeroImageSelector images={images} />
       <ProductSection></ProductSection>
+      <Reviews></Reviews>
     </div>
   );
 }

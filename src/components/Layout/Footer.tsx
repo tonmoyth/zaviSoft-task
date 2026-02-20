@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export default function Footer() {
   return (
-    <footer className=" lg:px-15 px-4 pt-10 ">
+    <footer className=" lg:px-15 px-4  ">
       <div>
         {/* Newsletter Section */}
         <div className="bg-[#4A69E2] lg:flex   z-0 relative -bottom-30 lg:-bottom-50  text-white rounded-[48px]  p-8 md:p-20 mb-12 h-[400px] lg:h-[545px] shadow-sm">
@@ -45,7 +45,7 @@ export default function Footer() {
 
         {/* Links Grid */}
 
-        <div className="relative bg-[#232321] h-[600px] rounded-[48px] overflow-hidden p-10 ">
+        <div className="relative bg-[#232321] h-[700px] lg:h-[600px] rounded-[48px] overflow-hidden p-6 lg:p-10 ">
           {/* BIG KICKS BACKGROUND TEXT */}
           <h1
             className="absolute bottom-[-40px]   lg:bottom-[-225px] left-1/2 -translate-x-1/2
