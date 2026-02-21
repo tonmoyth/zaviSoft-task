@@ -234,7 +234,7 @@ pnpm start
 
 **Coming Soon** – Pending deployment to Vercel or your hosting platform.
 
-_(Example structure once deployed: `https://kicks-ecommerce.vercel.app`)_
+_(Example structure once deployed: `https://zavisoft-task-eight.vercel.app/`)_
 
 ---
 

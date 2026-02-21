@@ -6,7 +6,6 @@ export const categoriesService = {
       // Fetch with ISR (revalidate every hour) and cache tags for on-demand revalidation
       const response = await fetch(url.toString(), {
         next: {
-          tags: ["categories"],
           revalidate: 3600, // revalidate every hour (3600 seconds)
         },
       });
