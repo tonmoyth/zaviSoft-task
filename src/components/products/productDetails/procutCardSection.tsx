@@ -80,7 +80,7 @@ export default function ProductCardSection({ products }: any) {
   };
 
   return (
-    <div className="w-full px-4 pt-12 lg:px-15 ">
+    <div className="w-full px-4 pt-6 lg:pt-24 lg:px-15 ">
       {/* Header */}
       <div>
         <div className="flex mb-4 items-center justify-between ">

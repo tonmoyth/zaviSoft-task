@@ -46,9 +46,9 @@ export default function CategoriesSection({ categories }: Props) {
   // Show empty state if no categories
   if (list.length === 0) {
     return (
-      <section className="w-full bg-[#1f1f1f] pt-10 pl-4 lg:pt-25 lg:pl-20">
+      <section className="w-full bg-[#1f1f1f] pt-6 pl-4 lg:pt-22.5  lg:pl-15 ">
         <div className=" mx-auto ">
-          <h2 className="text-2xl md:text-[74px] font-extrabold text-white mb-8 lg:mb-12">
+          <h2 className="text-2xl md:text-[74px] font-extrabold text-white mb-6 lg:mb-16">
             CATEGORIES
           </h2>
           <div className="flex items-center justify-center bg-[#ededed] rounded-2xl p-12 text-center">
@@ -65,7 +65,7 @@ export default function CategoriesSection({ categories }: Props) {
   }
 
   return (
-    <section className="w-full bg-[#1f1f1f] pt-10 pl-4 lg:pt-25 lg:pl-20">
+    <section className="w-full bg-[#1f1f1f] pt-6 pl-4 lg:pt-22.5 lg:mt-23 lg:pl-20">
       <div className=" mx-auto ">
         {/* Title with error badge if applicable */}
         <div className="flex items-center gap-4 mb-4 lg:mb-12">

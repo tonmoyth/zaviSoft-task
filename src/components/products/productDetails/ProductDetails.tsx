@@ -24,7 +24,7 @@ export default function ProductDetails({ product }: Props) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
 
   return (
-    <div className="mx-auto px-4 py-6 lg:px-15 grid grid-cols-1 lg:grid-cols-3 gap-12">
+    <div className="mx-auto px-4 py-6 lg:py-8 lg:px-15 grid grid-cols-1 lg:grid-cols-3 gap-12">
       {/* LEFT SIDE - IMAGE SECTION */}
 
       {/* Desktop Grid Layout */}

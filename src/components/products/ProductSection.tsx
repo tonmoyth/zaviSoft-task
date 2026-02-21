@@ -9,9 +9,9 @@ const ProductSection = async () => {
   });
 
   return (
-    <section className="w-full lg:px-15 pb-15">
+    <section className="w-full lg:px-15 mb-4 lg:mb-0 lg:py-16">
       {/* Header Section */}
-      <div className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <div className="px-4  lg:px-8 py-6 sm:py-16 lg:py-20">
         <div>
           <div className="flex ">
             {/* Left: Title */}

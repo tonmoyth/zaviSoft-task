@@ -39,10 +39,10 @@ const reviews: Review[] = [
 
 export default function ReviewsSection() {
   return (
-    <section className="w-full pt-15">
+    <section className="w-full pt-5 lg:pt-32">
       <div className=" mx-auto px-4 lg:px-20">
         {/* Header */}
-        <div className="flex items-center justify-between mb-10">
+        <div className="flex items-center justify-between mb-5">
           <h2 className="text-4xl font-extrabold tracking-tight">REVIEWS</h2>
 
           <Button

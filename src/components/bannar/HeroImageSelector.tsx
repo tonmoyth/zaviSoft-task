@@ -49,7 +49,7 @@ const HeroImageSelector: React.FC<HeroImageSelectorProps> = ({
   };
 
   return (
-    <section className="px-4 sm:px-6 lg:px-15 ">
+    <section className="px-4 lg:px-15 ">
       <div className="relative w-full min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[750px] overflow-hidden">
         {/* Background Image */}
         <div className="absolute  inset-0">

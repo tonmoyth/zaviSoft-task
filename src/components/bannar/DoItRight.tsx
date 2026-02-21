@@ -1,6 +1,6 @@
 export default function DoItRight() {
   return (
-    <div className="w-full  flex justify-center items-center my-5">
+    <div className="w-full  flex justify-center items-center my-6">
       <h1
         className="uppercase font-bold w-full text-center"
         style={{

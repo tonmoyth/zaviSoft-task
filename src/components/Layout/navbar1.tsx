@@ -10,7 +10,7 @@ export default function Navbar1() {
   const router = useRouter();
 
   return (
-    <div className="w-full flex justify-center p-2 sm:px-6 lg:px-15 mt-4 sm:mt-6 lg:mt-8">
+    <div className="w-full flex justify-center p-2 sm:px-4 lg:px-15 mt-8 sm:mt-6 lg:mt-8">
       <div className="w-[100%] p-4 sm:p-6 lg:p-8 flex items-center justify-between bg-[#FAFAFA] rounded-[16px] sm:rounded-[20px] lg:rounded-[24px]">
         {/* Left Menu - Hamburger Icon */}
         <div className="flex items-center ">
