@@ -9,7 +9,7 @@ const ProductSection = async () => {
   });
 
   return (
-    <section className="w-full lg:px-15 ">
+    <section className="w-full lg:px-15 pb-15">
       {/* Header Section */}
       <div className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div>
