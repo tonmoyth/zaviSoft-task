@@ -43,14 +43,14 @@ const images = [
 ];
 
 export default async function Home() {
-  const categoriesData = await getCategories();
+  const categoriesResponse = await getCategories();
 
   return (
     <div>
       <DoItRight></DoItRight>
       <HeroImageSelector images={images} />
       <ProductSection></ProductSection>
-      <Categories categories={categoriesData}></Categories>
+      <Categories categories={categoriesResponse}></Categories>
       <Reviews></Reviews>
     </div>
   );

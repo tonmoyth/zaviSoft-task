@@ -1,13 +1,14 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className=" lg:px-15 px-4  ">
       <div>
         {/* Newsletter Section */}
-        <div className="bg-[#4A69E2] lg:flex   z-0 relative -bottom-30 lg:-bottom-50  text-white rounded-[48px]  p-8 md:p-20 mb-12 h-[400px] lg:h-[545px] shadow-sm">
+        <div className="bg-[#4A69E2] lg:grid grid-cols-2   z-0 relative -bottom-30 lg:-bottom-30  text-white rounded-[48px]  p-8 md:p-20 mb-12 h-[400px] sm:h-[500px] md:h-[600px] lg:h-[600px] xl:h-[450px] shadow-sm">
           <div>
             <h2 className="text-2xl  md:text-3xl lg:text-[48px] font-semibold  mb-2">
               JOIN OUR KICKSPLUS <br /> CLUB & GET 15% OFF
@@ -15,7 +16,7 @@ export default function Footer() {
             <p className="text-white mb-4">
               Sign up for free! Join the community.
             </p>
-            <div className="flex flex-col text-white sm:flex-row gap-3">
+            <div className="flex  lg:w-[50%] text-white sm:flex-row gap-3">
               <Input
                 type="email"
                 placeholder="Email address"
@@ -23,23 +24,15 @@ export default function Footer() {
               />
               <Button type="submit">SUBMIT</Button>
             </div>
-          </div>
-          <div className="lg:ml-50 flex mt-8 lg:mt-0">
-            {" "}
-            <div className="relative">
-              <h1
-                className="uppercase font-bold  w-full text-center flex lg:justify-center lg:items-center"
-                style={{
-                  fontFamily: "'Rubik', sans-serif",
-                  fontWeight: 600,
-                  fontSize: "10vw", // viewport width proportional
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                }}
-              >
-                <span style={{ color: "#FFFFFF" }}>KICKS </span>
-              </h1>
-            </div>
+          </div>{" "}
+          <div className=" justify-center items-center mt-8 lg:mt-0">
+            <Image
+              src="/images/logo_newsletter.svg"
+              alt="KICKS background"
+              width={30}
+              height={22}
+              className="w-[70%]"
+            />
           </div>
         </div>
 
@@ -47,18 +40,14 @@ export default function Footer() {
 
         <div className="relative bg-[#232321] h-[700px] lg:h-[600px] rounded-[48px] overflow-hidden p-6 lg:p-10 ">
           {/* BIG KICKS BACKGROUND TEXT */}
-          <h1
-            className="absolute bottom-[-40px]   lg:bottom-[-225px] left-1/2 -translate-x-1/2
-               uppercase font-semibold text-white
-               pointer-events-none select-none z-0"
-            style={{
-              fontFamily: "'Rubik', sans-serif",
-              fontSize: "30vw",
-              lineHeight: "100%",
-            }}
-          >
-            KICKS
-          </h1>
+          <div className="absolute -bottom-60 lg:-bottom-30 left-0 right-0 w-full px-[79px] h-[540px] ">
+            <Image
+              src="/images/logo_footer.svg"
+              alt="KICKS background"
+              fill
+              className="w-full"
+            />
+          </div>
 
           {/* GRID CONTENT */}
           <div className="relative lg:h-[450px] z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-white">
@@ -148,7 +137,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-200 mt-12  text-center text-sm text-gray-500 mb-5">
+        <div className="border-t border-gray-200 mt-8  text-center text-sm text-gray-500 mb-5">
           © All rights reserved
         </div>
       </div>

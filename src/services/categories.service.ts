@@ -3,18 +3,35 @@ export const categoriesService = {
     try {
       const url = new URL(`${process.env.API_URL}/categories`);
 
-      //   if (params) {
-      //     Object.entries(params).forEach(([key, value]) => {
-      //       if (value !== undefined && value !== null && value !== "") {
-      //         url.searchParams.append(key, value.toString());
-      //       }
-      //     });
-      //   }
-      const response = await fetch(url.toString());
-      const products = await response.json();
-      return products;
+      // Fetch with ISR (revalidate every hour) and cache tags for on-demand revalidation
+      const response = await fetch(url.toString(), {
+        next: {
+          tags: ["categories"],
+          revalidate: 3600, // revalidate every hour (3600 seconds)
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`API error: ${response.status} ${response.statusText}`);
+      }
+
+      const json = await response.json();
+
+      // Normalize response
+      const data = Array.isArray(json)
+        ? json
+        : json?.data || json?.results || json?.items || json?.categories || [];
+
+      return {
+        success: true,
+        data,
+      };
     } catch (error: any) {
-      return { data: null, message: error?.message };
+      return {
+        success: false,
+        data: [],
+        error: error?.message || "Failed to fetch categories",
+      };
     }
   },
 };

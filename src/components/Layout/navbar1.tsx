@@ -2,9 +2,12 @@
 
 import { Search, User, Menu } from "lucide-react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar1() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <div className="w-full flex justify-center p-2 sm:px-6 lg:px-15 mt-4 sm:mt-6 lg:mt-8">
@@ -40,16 +43,23 @@ export default function Navbar1() {
           </div>
         </div>
 
-        {/* Center Logo */}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-widest flex-1 text-center">
-          KICKS
-        </h1>
+        <div className="sm:w-[20%] flex justify-center items-center">
+          <Image
+            className="cursor-pointer w-[80px] h-[auto] sm:w-[128px] sm:h-[32px]"
+            src="/images/logo_header.svg"
+            alt="Kicks - Ecommerce store"
+            width={128}
+            height={32}
+            priority
+            onClick={() => router.push("/")}
+          />
+        </div>
 
         {/* Right Icons */}
         <div className="flex items-center gap-4 sm:gap-5 lg:gap-7">
           <Search
             strokeWidth={1.5}
-            className="w-6 h-6 sm:w-6 sm:h-6 lg:w-6 lg:h-6 text-black cursor-pointer"
+            className="w-6 h-6 hidden lg:block sm:w-6 sm:h-6 lg:w-6 lg:h-6 text-black cursor-pointer"
           />
 
           <User

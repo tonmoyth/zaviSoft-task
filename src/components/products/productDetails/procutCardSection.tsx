@@ -80,10 +80,10 @@ export default function ProductCardSection({ products }: any) {
   };
 
   return (
-    <div className="w-full px-4 py-12 lg:px-15 ">
+    <div className="w-full px-4 pt-12 lg:px-15 ">
       {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center justify-between mb-8">
+      <div>
+        <div className="flex mb-4 items-center justify-between ">
           {/* Left: Title */}
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-black">
             You may also like

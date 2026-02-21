@@ -35,7 +35,7 @@ function EmblaWrapper({ list }: { list: any[] }) {
 
   return (
     <div className="relative">
-      <div className="absolute -top-13 right-0 lg:-top-20 flex gap-3 lg:pr-20 pr-2 z-10">
+      <div className="absolute -top-13 right-0 lg:-top-30 flex gap-3 lg:pr-20 pr-2 z-10">
         <button
           onClick={() => emblaApi?.scrollPrev()}
           disabled={!canPrev}
